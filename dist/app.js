@@ -25,19 +25,18 @@ class App {
         this.app.use(bodyParser.urlencoded({ extended: false }));
         this.app.use(cors());
         this.app.use('/api', index_1.default);
-        this.app.use(express.static(path.join(__dirname, './client/build')));
+        this.app.use(express.static(path.join(__dirname, 'client/build')));
         if (process.env.NODE_ENV === 'production') {
-            this.app.use(express.static(path.join(__dirname, './client/build')));
+            this.app.use(express.static(path.join(__dirname, 'client/build')));
             //
             this.app.get('*', (req, res) => {
-                res.sendfile(path.join(__dirname = './client/build/index.html'));
+                res.sendfile(path.join(__dirname = 'client/build/index.html'));
             });
         }
         //build mode
-        this.app.get('/*', (req, res) => {
-            res.sendFile(path.join(__dirname + './client/build/index.html'));
+        this.app.get('*', (req, res) => {
+            res.sendFile(path.join(__dirname + 'client/build/index.html'));
         });
-        this.app.use(express.static(path.join(__dirname, 'client/build')));
     }
 }
 exports.default = new App().app;
