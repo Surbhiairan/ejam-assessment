@@ -20,5 +20,6 @@
     "mongoose": "^5.9.12",
     "nodemon": "^2.0.3",
     "path": "^0.12.7"
-  }
+  },
+  "homepage": "https://ejam-assessment.herokuapp.com/"
 }
