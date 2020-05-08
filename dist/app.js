@@ -27,10 +27,10 @@ class App {
         this.app.use('/api', index_1.default);
         this.app.use(express.static(path.join(__dirname, 'client/build')));
         if (process.env.NODE_ENV === 'production') {
-            this.app.use(express.static(path.join(__dirname, 'client/build')));
+            this.app.use(express.static(path.join(__dirname, './client/build')));
             //
             this.app.get('*', (req, res) => {
-                res.sendFile(path.join(__dirname = 'client/build/index.html'));
+                res.sendFile(path.join(__dirname = './client/build/index.html'));
             });
         }
         //build mode
