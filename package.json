@@ -2,7 +2,7 @@
   "name": "ejam-assessment",
   "version": "1.0.0",
   "description": "Ejam backend",
-  "main": "server.js",
+  "main": "server.ts",
   "scripts": {
     "client-install": "npm install --prefix client",
     "client": "npm start --prefix client",

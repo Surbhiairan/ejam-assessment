@@ -29,10 +29,12 @@ class App {
 
         this.app.use('/api', router)
 
-        this.app.use(express.static(path.join(__dirname, 'client/build')));
+        this.app.use(express.static(path.join(__dirname, '../client/build')));
+        console.log('dir---', __dirname)
 
         if(process.env.NODE_ENV === 'production') {
-            this.app.use(express.static(path.join(__dirname, 'client/build')));
+            this.app.use(express.static(path.join(__dirname, '../client/build')));
+            console.log('dir---', __dirname)
             //
             this.app.get('*', (req, res) => {
               res.sendFile(path.join(__dirname + '../client/build/index.html'));
@@ -40,7 +42,7 @@ class App {
           }
           //build mode
           this.app.get('*', (req, res) => {
-            res.sendFile(path.join(__dirname+ 'client/build/index.html'));
+            res.sendFile(path.join(__dirname+ '../client/build/index.html'));
           })        
     }
 
