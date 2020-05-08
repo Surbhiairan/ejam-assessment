@@ -1,5 +1,5 @@
 {
-  "name": "ejam-backend",
+  "name": "ejam-assessment",
   "version": "1.0.0",
   "description": "Ejam backend",
   "main": "server.js",
