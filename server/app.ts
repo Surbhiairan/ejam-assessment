@@ -41,10 +41,7 @@ class App {
           //build mode
           this.app.get('*', (req, res) => {
             res.sendFile(path.join(__dirname+'./client/build/index.html'));
-          })
-        
-          this.app.use(express.static(path.join(__dirname, './client/build')));
-        
+          })        
     }
 
     private mongoSetup = (): void => {
