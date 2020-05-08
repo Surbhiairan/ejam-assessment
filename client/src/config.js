@@ -1,4 +1,4 @@
 export const URI = {
-    GET_DEPLOYEMNT: 'deployment',
-    GET_TEMPLATE: 'template'
+    GET_DEPLOYEMNT: 'api/deployment',
+    GET_TEMPLATE: 'api/template'
 }
